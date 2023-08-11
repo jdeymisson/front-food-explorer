@@ -24,7 +24,6 @@ export default createGlobalStyle`
             background-color: ${({ theme }) => theme.COLORS.GRAY_200};
             border-radius: 8px;
         }
-
     }
 
     body {
@@ -48,8 +47,11 @@ export default createGlobalStyle`
         filter: brightness(0.9);
     }
     
-    legend, button, a, h3 {
+    h1, h2, h3, button, a {
         font-family: 'Poppins', sans-serif;
-        font-weight: 500;
+    }
+
+    input, label {
+        font-family: 'Roboto', sans-serif;
     }
 `
