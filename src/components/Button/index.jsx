@@ -1,14 +1,14 @@
 import { Container } from './styles';
 
 export function Button({title, image, isInvisible = false, ...rest}) {
-  return (
+    return (
     <Container
         type="button"
         isInvisible={isInvisible}
         {...rest}
     >
-        {image && <img src={image} alt="ícone do botão"/>}
+        {image && <img src={image} alt="Ícone do botão"/>}
         {title}
     </Container>
-  )
+    )
 }

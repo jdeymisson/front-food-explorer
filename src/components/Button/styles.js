@@ -14,8 +14,9 @@ export const Container = styled.button`
     align-items: center;
     justify-content: center;
     gap: 1.1rem;
+
     &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+        opacity: 0.5;
+        cursor: not-allowed;
     }
 `
