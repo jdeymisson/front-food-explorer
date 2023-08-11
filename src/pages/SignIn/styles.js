@@ -14,7 +14,7 @@ export const Container = styled.div`
 `
 
 export const Brand = styled.div`
-    width: 100%;
+    flex: 1;
     padding: 5rem;
     
     display: flex;
@@ -35,33 +35,35 @@ export const Brand = styled.div`
     }
 `
 
-
-export const Form = styled.form`
-    max-width: 78.4rem;
-    height: fit-content;
-    margin: auto;
-    padding: 6.4rem;
-    
-    border-radius: 1.6rem;
-    
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_DARK_700};
-
-    display: flex;
-    flex-direction: column;
+export const ContentForm = styled.div`
     flex: 1;
-    gap: 3.2rem;
+    
+    > form {
+        max-width: 78.4rem;
+        margin: auto;
+        padding: 6.4rem;
+        
+        border-radius: 1.6rem;
+        
+        background: ${({ theme }) => theme.COLORS.BACKGROUND_DARK_700};
 
-> h1 {
-    font-size: 3.2rem;
-    text-align: center;
-    color: ${({ theme }) => theme.COLORS.WHITE_100};
-}
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 3.2rem;
 
-> a {
-    color: ${({ theme }) => theme.COLORS.WHITE_100};
-    font-size: 1.4rem;
-    text-align: center;
-}
+        > h1 {
+            font-size: 3.2rem;
+            text-align: center;
+            color: ${({ theme }) => theme.COLORS.WHITE_100};
+        }
+
+        > a {
+            color: ${({ theme }) => theme.COLORS.WHITE_100};
+            font-size: 1.4rem;
+            text-align: center;
+        }
+    }
 
 @media (min-width: 768px) {
     margin-inline: 0;

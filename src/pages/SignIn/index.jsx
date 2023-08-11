@@ -1,13 +1,13 @@
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 
-import { Container, Form, Brand } from './styles';
+import { Container, Brand, ContentForm } from './styles';
 import { useSignIn } from './hooks';
 import loadSpinner  from "../../assets/spined-loading.gif";
 
 export const SignIn = () => {
     const { email, password, loading, handleSignIn } = useSignIn();
-    console.log()
+
     return (
         <Container>
             <Brand>
@@ -26,36 +26,38 @@ export const SignIn = () => {
                 <h1>food explorer</h1>
             </Brand>
 
-            <Form>
-                <h1>Faça login</h1>
-                <Input
-                    type="email"
-                    id="email"
-                    title="Email"
-                    placeholder="Exemplo: exemplo@exemplo.com"
-                    onChange={({ target }) => email.current = target.value}
-                    required
-                />
+            <ContentForm>
+                <form>
+                    <h1>Faça login</h1>
+                    <Input
+                        type="email"
+                        id="email"
+                        title="Email"
+                        placeholder="Exemplo: exemplo@exemplo.com"
+                        onChange={({ target }) => email.current = target.value}
+                        required
+                    />
 
-                <Input
-                    type="password"
-                    id="password"
-                    title="Senha"
-                    placeholder="No mínimo 6 caracteres"
-                    onChange={({ target }) => password.current = target.value}
-                    minLength="6"
-                    required
-                />
+                    <Input
+                        type="password"
+                        id="password"
+                        title="Senha"
+                        placeholder="No mínimo 6 caracteres"
+                        onChange={({ target }) => password.current = target.value}
+                        minLength="6"
+                        required
+                    />
 
-                <Button
-                    title={!loading.current ? "Entrar" : ""}
-                    image={loading.current && loadSpinner}
-                    onClick={handleSignIn}
-                    disabled={loading.current}
-                />
+                    <Button
+                        title={!loading.current ? "Entrar" : ""}
+                        image={loading.current && loadSpinner}
+                        onClick={handleSignIn}
+                        disabled={loading.current}
+                    />
 
-                <a>Criar uma conta</a>
-            </Form>
+                    <a>Criar uma conta</a>
+                </form>
+            </ContentForm>
         </Container>
     );
 }

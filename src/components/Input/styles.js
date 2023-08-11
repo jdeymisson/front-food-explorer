@@ -26,7 +26,6 @@ export const Input = styled.input`
     color: ${({ theme }) => theme.COLORS.WHITE_100};
     
     border: 0;
-    outline: nome;
 
     width: 100%;
     height: 4.8rem;
