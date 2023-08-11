@@ -28,7 +28,7 @@ export default createGlobalStyle`
     }
 
     body {
-        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_DARK_400};
         color: ${({ theme }) => theme.COLORS.WHITE};
         font-family: 'Roboto', sans-serif;
         -webkit-font-smoothing: antialiased;
