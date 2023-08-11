@@ -1,13 +1,15 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 
 export const Container = styled.button`
     width: 100%;
     height: 4.8rem;
-    padding: 4px 8px;
+    padding: 1.2rem 11.8rem;
+
     border: none;
-    border-radius: 0.8rem;
+    border-radius: .4rem;
+
     background: ${({ theme }) => theme.COLORS.RED};
-    color: ${({ theme }) => theme.COLORS.WHITE};
+    color: ${({ theme }) => theme.COLORS.WHITE_100};
     font-size: 1.4rem;
 
     display: ${({ isInvisible}) => isInvisible ? 'none': 'flex'};
