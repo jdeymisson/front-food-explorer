@@ -26,7 +26,7 @@ export const Input = styled.input`
     color: ${({ theme }) => theme.COLORS.WHITE_100};
     
     border: 0;
-
+    font-size: 1.6rem;
     width: 100%;
     height: 4.8rem;
     padding: 1.6rem 1.4rem;
